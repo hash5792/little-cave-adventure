@@ -1,9 +1,11 @@
-// https://helderman.github.io/htpataic/htpataic02.html
+// https://helderman.github.io/htpataic/htpataic03.html
 
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 
 	"github.com/hash5792/little-cave-adventure/parser"
 )
@@ -11,8 +13,11 @@ import (
 var input string = "look around"
 
 func getInput() {
+	reader := bufio.NewReader(os.Stdin)
+
 	fmt.Printf("\n--> ")
-	fmt.Scanln(&input)
+
+	input, _ = reader.ReadString('\n')
 }
 
 func main() {
